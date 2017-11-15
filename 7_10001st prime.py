@@ -6,7 +6,7 @@ primes = []
 def find_primes(x):
     """ Takes a number and calulates if that number is equal to 
     zero when divided by numbers up to the square root of this number, 
-    since the sqrt is the highest number possible to be a"""
+    since the sqrt is the highest number possible to be a prime of that number"""
     global primes
     n = x // 2
     for i in range(2, n + 1):
