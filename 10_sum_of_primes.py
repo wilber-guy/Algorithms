@@ -24,13 +24,15 @@ def find_primes(num):
         
 find_primes(2000000)
 
-# rewritten utilizing Sieve of Eratosthenes algorithm from 276 BC
 ''' This algorithm uses a principle of primes, so it only has to check
 numbers that are not divisible by numbers already calulated.
 This is NOT my code, but I have it here to later come back to and recall
 Here is a URL explaining Sieve of Eratosthenes
 https://www.khanacademy.org/computing/computer-science/cryptography/comp-number-theory/v/sieve-of-eratosthenes-prime-adventure-part-4'''
-# this code is about 10000 times faster than my method
+# this code is about 10000 times faster than my method beceause it creates a boolean array and 
+# calulates if future numbers will need to be calculated or can just be skipped up until
+# the squareroot of 2 million, then it looks at the array andfigureouts what other numbers
+# are prime
 maxval = 2000000
 max_fac_base = int(round(maxval ** 0.5))
 possible_factors = range(5, max_fac_base + 1, 2)
